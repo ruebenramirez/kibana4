@@ -8,9 +8,9 @@ RUN sudo apt-get install -y openjdk-7-jre-headless vim screen wget curl
 
 WORKDIR /opt
 
-RUN wget --no-check-certificate -O- https://download.elasticsearch.org/kibana/kibana/kibana-4.0.0-BETA2.tar.gz | tar -xzvf -
+RUN wget --no-check-certificate -O- https://download.elasticsearch.org/kibana/kibana/kibana-4.0.0-beta3.tar.gz | tar -xzvf -
 
-RUN sed -i 's/elasticsearch: "http:\/\/localhost:9200\"/elasticsearch: \"http:\/\/elk.cdb.rax.io:9200\"/g' /opt/kibana-4.0.0-BETA2/config/kibana.yml
+RUN sed -i 's/elasticsearch: "http:\/\/localhost:9200\"/elasticsearch: \"http:\/\/elk.cdb.rax.io:9200\"/g' /opt/kibana-4.0.0-BETA3/config/kibana.yml
 
 EXPOSE 5601
 
